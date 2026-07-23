@@ -1,17 +1,15 @@
-# Eurostat Causal Analysis with Panel Data
+# Eurostat Industrial Production Time Series Analysis
 
 ## Overview
 
-This project investigates the relationship between macroeconomic indicators using panel data retrieved directly from the Eurostat API.
-
-The analysis focuses on reproducible empirical research, including data acquisition, preprocessing, econometric modeling, and interpretation of results.
+This project analyzes Industrial Production Index (IPI) data obtained directly from the Eurostat API. The objective is to demonstrate a complete and reproducible workflow for time series analysis, including data acquisition, preprocessing, seasonal adjustment, outlier detection, statistical modeling, and interpretation of empirical results.
 
 ## Project Objectives
 
-- Download official data directly from Eurostat
-- Clean and prepare panel datasets
-- Estimate econometric models
-- Interpret empirical findings
+- Retrieve official data directly from the Eurostat API
+- Clean and preprocess time series data
+- Detect and treat outliers
+- Perform statistical and econometric analysis
 - Produce reproducible research outputs
 
 ## Repository Structure
@@ -28,23 +26,23 @@ The analysis focuses on reproducible empirical research, including data acquisit
 │   ├── assignment.pdf
 │   └── report.pdf
 │
-└── output/
-    ├── figures/
-    └── tables/
+├── README.md
+└── LICENSE
 ```
 
 ## Data
 
 No datasets are stored in this repository.
 
-The analysis downloads all required data directly from the Eurostat API during execution.
+All data are downloaded directly from the Eurostat API during execution of the analysis.
 
 ## Technologies
 
 - R
 - Eurostat API
 - tidyverse
-- fixest
+- forecast
+- tsoutliers
 - ggplot2
 
 ## Reproducibility
@@ -57,15 +55,19 @@ source("code/analysis.R")
 
 The script automatically downloads the required data and reproduces the complete analysis.
 
+> **Note**
+>
+> This project relies on live data retrieved from the Eurostat API. Because external APIs evolve over time, dataset identifiers, query parameters, or service availability may change. If the original endpoint is modified or becomes unavailable, minor updates to the R script may be required to fully reproduce the analysis. The methodology and analytical workflow presented in this repository remain unchanged.
+
 ## Results
 
-The repository contains:
+This repository includes:
 
 - complete R implementation
-- reproducible notebook
+- reproducible Jupyter notebook
 - project report
-- generated figures and regression outputs
+- generated figures and statistical outputs
 
 ## Author
 
-Konstantinos Papavrontos
+**Konstantinos Papavrontos**
